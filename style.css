@@ -246,6 +246,7 @@ body {
     animation: fadeInScale 1.5s ease-out;
     max-width: 90%;
     max-height: 90vh;
+    position: relative;
 }
 
 @keyframes fadeInScale {
@@ -264,6 +265,43 @@ body {
     max-height: 90vh;
     border-radius: 20px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+/* Ảnh profile tròn ở góc trên phải */
+.profile-image {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 
+                0 0 0 3px rgba(65, 105, 225, 0.5);
+    animation: profileFloat 3s ease-in-out infinite, fadeInProfile 1.8s ease-out;
+    z-index: 20;
+}
+
+@keyframes profileFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+@keyframes fadeInProfile {
+    from {
+        opacity: 0;
+        transform: scale(0) rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 /* Nút mute âm thanh */
@@ -471,6 +509,14 @@ body {
     
     .exploding-heart {
         font-size: 30px;
+    }
+    
+    .profile-image {
+        width: 80px;
+        height: 80px;
+        top: -20px;
+        right: -20px;
+        border-width: 3px;
     }
 }
 
