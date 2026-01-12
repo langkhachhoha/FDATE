@@ -246,7 +246,7 @@ body {
     animation: fadeInScale 1.5s ease-out;
     max-width: 90%;
     max-height: 90vh;
-    position: relative;
+    display: inline-block;
 }
 
 @keyframes fadeInScale {
