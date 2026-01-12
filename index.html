@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From HMH to NDH 😇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Màn hình chính với background và lịch -->
+    <div id="mainScreen" class="hidden">
+        <div class="background-overlay"></div>
+        
+        <!-- Nút điều khiển âm thanh -->
+        <button id="muteButton" class="mute-button">
+            <svg id="soundIcon" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+        </button>
+
+        <!-- Container cho ảnh lịch -->
+        <div class="calendar-container">
+            <img src="image_2.png" alt="Our First Date Calendar" class="calendar-image">
+        </div>
+
+        <!-- Hiệu ứng trái tim rơi -->
+        <div class="hearts-container"></div>
+        
+        <!-- Hiệu ứng ngôi sao -->
+        <div class="stars-container"></div>
+
+        <!-- Audio cho nhạc nền -->
+        <audio id="bgMusic" loop>
+            <source src="music_1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Màn hình nhập mật khẩu -->
+    <div id="passwordScreen" class="password-screen">
+        <div class="password-container">
+            <h1 class="title">🌹 Chỉ dành cho cậu 🌹</h1>
+            <p class="subtitle">Nhập mật khẩu để xem tiếp ạaaa! 💖💖💖</p>
+            
+            <div class="password-inputs">
+                <input type="text" maxlength="1" class="password-digit" data-index="0">
+                <input type="text" maxlength="1" class="password-digit" data-index="1">
+                <input type="text" maxlength="1" class="password-digit" data-index="2">
+                <input type="text" maxlength="1" class="password-digit" data-index="3">
+            </div>
+            
+            <div class="hint-box">
+                <p class="hint-title">💡 Gợi ý:</p>
+                <p class="hint-text" id="hintText">Số cậu thích + Số tớ thích nha ^^</p>
+            </div>
+            
+            <div id="errorMessage" class="error-message hidden">
+                ❌ Mật khẩu không đúng! Nghĩ kĩ lại nhaaa! 
+            </div>
+        </div>
+
+        <!-- Audio cho âm thanh sai mật khẩu -->
+        <audio id="errorSound">
+            <source src="music_2.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Hiệu ứng trái tim nền -->
+        <div class="floating-hearts">
+            <span class="floating-heart">💕</span>
+            <span class="floating-heart">💖</span>
+            <span class="floating-heart">💗</span>
+            <span class="floating-heart">💓</span>
+            <span class="floating-heart">💝</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
