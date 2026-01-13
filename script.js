@@ -1,5 +1,5 @@
 // Cấu hình mật khẩu - BẠN CÓ THỂ THAY ĐỔI PHẦN NÀY
-const CORRECT_PASSWORD = "1234"; // Thay đổi mật khẩu 4 số ở đây
+const CORRECT_PASSWORD = "1268"; // Thay đổi mật khẩu 4 số ở đây
 
 // Lấy các elements
 const passwordScreen = document.getElementById('passwordScreen');
